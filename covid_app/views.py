@@ -6,7 +6,7 @@ def home(request):
 
     if request.method == 'POST':
         country = request.POST['country']
-        url = 'https://corona.lmao.ninja/countries/'+country
+        url = 'https://corona.lmao.ninja/v2/countries/'+country
         response = requests.get(url)
         jres = json.loads(response.text)
         print(jres)
